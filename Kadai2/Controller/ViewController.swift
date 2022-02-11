@@ -7,13 +7,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+final class ViewController: UIViewController {
+    
+    @IBOutlet weak private var inputNumField1: UITextField!
+    @IBOutlet weak private var inputNumField2: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    @IBAction func ToggleCalculateModeSegmentedControl(_ sender: UISegmentedControl) {
+    }
+    
+    @IBAction func CalculateButton(_ sender: UIButton) {
+    }
 
 }
 
