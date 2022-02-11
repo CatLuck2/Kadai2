@@ -7,8 +7,9 @@
 
 import UIKit
 
-protocol CalculateProtocol {
+fileprivate protocol CalculateProtocol {
     var result: Int { get }
+    var calculationTargetsArray: [Int] { get }
     mutating func calculate(inputValue: Int)
     func getResult() -> Int
 }
@@ -16,6 +17,7 @@ protocol CalculateProtocol {
 final class FourArithmeticOperateModel {
     struct Addition: CalculateProtocol {
         var result: Int = 0
+        var calculationTargetsArray: [Int] = []
         mutating func calculate(inputValue: Int) {
             result += inputValue
         }
@@ -25,8 +27,9 @@ final class FourArithmeticOperateModel {
     }
     struct Division: CalculateProtocol {
         var result: Int = 0
+        var calculationTargetsArray: [Int] = []
         mutating func calculate(inputValue: Int) {
-            result += inputValue
+            result -= inputValue
         }
         func getResult() -> Int {
             result
@@ -34,8 +37,9 @@ final class FourArithmeticOperateModel {
     }
     struct Multiplication: CalculateProtocol {
         var result: Int = 0
+        var calculationTargetsArray: [Int] = []
         mutating func calculate(inputValue: Int) {
-            result += inputValue
+            result *= inputValue
         }
         func getResult() -> Int {
             result
@@ -43,8 +47,9 @@ final class FourArithmeticOperateModel {
     }
     struct Divide: CalculateProtocol {
         var result: Int = 0
+        var calculationTargetsArray: [Int] = []
         mutating func calculate(inputValue: Int) {
-            result += inputValue
+            result /= inputValue
         }
         func getResult() -> Int {
             result
